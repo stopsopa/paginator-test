@@ -1,7 +1,6 @@
 language: php
 php:
-  - '7.0'
-  - hhvm
+  - '7.2'
 
 sudo: false
 
@@ -9,4 +8,4 @@ install:
   - composer install --no-interaction
 
 script:
-  - /bin/bash phpunit --stop-on-failure
+  - php vendor/bin/phpunit
