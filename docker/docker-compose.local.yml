@@ -1,0 +1,32 @@
+version: '3.5'
+
+services:
+    mysql:
+        image: mysql/mysql-server:5.7
+        container_name: ${PROJECT_NAME}_mysql
+        ports:
+            - "$PROTECTED_MYSQL_PORT:3306"
+        environment:
+            - MYSQL_ROOT_PASSWORD=$PROTECTED_MYSQL_PASS
+            - MYSQL_ROOT_HOST=%
+        networks:
+            - "${PROJECT_NAME}-network"
+        volumes:
+            - ./mysql_db/$PROJECT_NAME:/var/lib/mysql
+#
+    phpmyadmin:
+        container_name: ${PROJECT_NAME}_pma
+        environment:
+            - PMA_USER=root
+            - PMA_PASSWORD=$PROTECTED_MYSQL_PASS
+            - PMA_HOST=mysql
+            - PHP_UPLOAD_MAX_FILESIZE=100MB
+
+        # run on mac to generate .htpasswd:
+        #   htpasswd -c .htpasswd admin
+        # default is 1234567890
+    php_fpm:
+        container_name: ${PROJECT_NAME}_fpm
+        build:
+            context: fpm
+            dockerfile: Dockerfile-local

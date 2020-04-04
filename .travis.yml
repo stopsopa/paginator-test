@@ -1,0 +1,12 @@
+language: php
+php:
+  - '7.0'
+  - hhvm
+
+sudo: false
+
+install:
+  - composer install --no-interaction
+
+script:
+  - /bin/bash phpunit --stop-on-failure

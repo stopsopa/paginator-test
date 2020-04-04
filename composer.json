@@ -1,0 +1,19 @@
+{
+    "name": "stopsopa/paginator-test",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Szymon Działowski"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Stopsopa\\PaginatorTest\\": "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Stopsopa\\PaginatorTest\\": "tests/" }
+    },
+    "require-dev": {
+        "satooshi/php-coveralls": "v0.7.1",
+        "phpunit/phpunit": "v5.7"
+    }
+}
