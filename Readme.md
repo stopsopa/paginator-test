@@ -8,6 +8,8 @@
     
 # Usage
 
+```php
+
     <?php
     
     use Stopsopa\PaginatorTest\Paginator;
@@ -53,6 +55,7 @@
     //        'current' => bool(false)
     //    }
     //}
+```
 
 see more: [test](tests/GeneralTest.php)    
 
