@@ -103,6 +103,8 @@ if [ "$DIFF" != "" ] || [ "$FORCE" = "1" ]; then
         exit 5
     fi
 
+    printf "\n\n    all good\n\n";
+
 else
 
     { red "\n\n    Nothing new to publish, \n        run '/bin/bash update.sh force patch' if you're sure that there is still something that should be published\n\n"; } 2>&3
