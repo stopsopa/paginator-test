@@ -8,7 +8,53 @@
     
 # Usage
 
+    <?php
     
+    use Stopsopa\PaginatorTest\Paginator;
+    
+    require_once dirname(__FILE__).'/vendor/autoload.php';
+    
+    $list = str_split('abcdefghijklmnopqrstuwxyz', 1);
+    
+    $paginator = new Paginator(
+        3, // per page
+        // function to return length of the set
+        function () use ($list) {
+            return count($list);
+        },
+        // function to provide one page of elements from set
+        function ($offset, $limit) use ($list) {
+            return array_slice($list, $offset, $limit);
+        },
+        3 // how many buttons around current
+    );
+    
+    $page = $paginator->getPage(3);
+    
+    var_dump($page->elements());
+    //array(3) {
+    //      [0] => string(1) "g"
+    //      [1] => string(1) "h"
+    //      [2] => string(1) "i"
+    //}
+    
+    var_dump($page->pages());
+    //array(3) {
+    //    [0] => array(2) {
+    //        'page' => int(2)
+    //        'current' => bool(false)
+    //    }
+    //    [1] => array(2) {
+    //        'page' => int(3)
+    //        'current' => bool(true)
+    //    }
+    //    [2] => array(2) {
+    //        'page' => int(4)
+    //        'current' => bool(false)
+    //    }
+    //}
+
+see more: [test](tests/GeneralTest.php)    
 
 # Dev notes
 
