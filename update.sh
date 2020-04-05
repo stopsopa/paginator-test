@@ -88,9 +88,11 @@ if [ "$DIFF" != "" ] || [ "$FORCE" = "1" ]; then
 
     VER="$(/bin/bash "$_DIR/bash/semver.sh" "$VER")"
 
-    git tag "$VER"
+    VER="$(node "$_DIR/bash/node/json/set.js" "$_DIR/composer.json" version "$VER")";
 
     git commit --amend --no-edit
+
+    git tag "$VER"
 
     git push $ORIGIN $REMOTEBRANCH --tags
 

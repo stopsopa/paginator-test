@@ -1,6 +1,6 @@
 {
     "name": "stopsopa/paginator-test",
-    "version" : "v0.0.0",
+    "version": "v0.0.0",
     "license": "MIT",
     "authors": [
         {
@@ -8,10 +8,14 @@
         }
     ],
     "autoload": {
-        "psr-4": { "Stopsopa\\PaginatorTest\\": "src/" }
+        "psr-4": {
+            "Stopsopa\\PaginatorTest\\": "src/"
+        }
     },
     "autoload-dev": {
-        "psr-4": { "Stopsopa\\PaginatorTest\\": "tests/" }
+        "psr-4": {
+            "Stopsopa\\PaginatorTest\\": "tests/"
+        }
     },
     "require-dev": {
         "satooshi/php-coveralls": "v0.7.1",
