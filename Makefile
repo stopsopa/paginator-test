@@ -22,3 +22,6 @@ cli:
 coverage: phpunit
 	node server.js --port 8899 --dir build/html
 	# visit after http://localhost:8899/index.html
+
+update:
+	/bin/bash update.sh --help
