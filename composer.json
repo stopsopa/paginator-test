@@ -1,12 +1,15 @@
 {
     "name": "stopsopa/paginator-test",
-    "version": "v0.0.2",
+    "version": "v0.0.3",
     "license": "MIT",
     "authors": [
         {
             "name": "Szymon Działowski"
         }
     ],
+    "require": {
+        "php": "^7.2"
+    },
     "autoload": {
         "psr-4": {
             "Stopsopa\\PaginatorTest\\": "src/"
