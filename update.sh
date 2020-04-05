@@ -88,7 +88,7 @@ if [ "$DIFF" != "" ] || [ "$FORCE" = "1" ]; then
 
     VER="$(/bin/bash "$_DIR/bash/semver.sh" "$VER")"
 
-    VER="$(node "$_DIR/bash/node/json/set.js" "$_DIR/composer.json" version "$VER")";
+    node "$_DIR/bash/node/json/set.js" "$_DIR/composer.json" version "$VER";
 
     git commit --amend --no-edit
 
