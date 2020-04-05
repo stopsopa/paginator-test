@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/stopsopa/paginator-test.svg?branch=v0.0.0)](https://travis-ci.org/stopsopa/paginator-test)
-[![Coverage Status](https://coveralls.io/repos/github/stopsopa/paginator-test/badge.svg?branch=v0.0.0)](https://coveralls.io/github/stopsopa/paginator-test?branch=v0.0.0)
+[![Build Status](https://travis-ci.org/stopsopa/paginator-test.svg?branch=vvv0.0.8)](https://travis-ci.org/stopsopa/paginator-test)
+[![Coverage Status](https://coveralls.io/repos/github/stopsopa/paginator-test/badge.svg?branch=vvv0.0.8)](https://coveralls.io/github/stopsopa/paginator-test?branch=vvv0.0.8)
 [![Latest Stable Version](https://poser.pugx.org/stopsopa/paginator-test/v/stable)](https://packagist.org/packages/stopsopa/paginator-test)
 [![License](https://poser.pugx.org/stopsopa/paginator-test/license)](https://packagist.org/packages/stopsopa/paginator-test)
 
@@ -7,6 +7,11 @@
 # Table of Contents
 
 <!-- toc -->
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Dev notes](#dev-notes)
+
 <!-- tocstop -->
 
 _(TOC generated using [markdown-toc](https://github.com/jonschlinkert/markdown-toc))_
