@@ -90,7 +90,13 @@ if [ "$DIFF" != "" ] || [ "$FORCE" = "1" ]; then
 
     node "$_DIR/bash/node/json/set.js" "$_DIR/composer.json" version "$VER";
 
-    git add .
+    node update-badge.js
+
+    npx markdown-toc -i "$_DIR/README.md"
+
+    git add "$_DIR/README.md"
+
+    git add "$_DIR/composer.json"
 
     git commit --amend --no-edit
 
