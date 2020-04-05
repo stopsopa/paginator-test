@@ -90,6 +90,8 @@ if [ "$DIFF" != "" ] || [ "$FORCE" = "1" ]; then
 
     node "$_DIR/bash/node/json/set.js" "$_DIR/composer.json" version "$VER";
 
+    git add .
+
     git commit --amend --no-edit
 
     git tag "$VER"
