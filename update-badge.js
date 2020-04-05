@@ -3,7 +3,8 @@ const fs    = require('fs');
 
 const path  = require('path');
 
-const package = require('./package');
+// const package = require('./package');
+const package = require('./composer');
 
 // process.stdout.write(JSON.stringify(package, null, 4));
 
