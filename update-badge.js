@@ -15,7 +15,6 @@ process.stdout.write(`\n\n`);
 
 const README_md = path.resolve(__dirname, 'README.md');
 
-
 if ( ! fs.existsSync(README_md) ) {
 
     throw `File '${README_md}' doesn't exist`;
@@ -31,7 +30,7 @@ let regnpm = /^\[!\[Build Status\]/;
 let regcov = /^\[!\[Coverage Status\]/;
 // let regcov = /^\[!\[codecov\]/;
 
-const n = 'v' + package.version;
+const n = 'v' + (package.version.replace(/^[^\d\.]*([\d\.]+)$/, '$1'));
 
 let done = 0;
 
@@ -39,7 +38,7 @@ for (let i = 0, l = content.length ; i < l ; i += 1 ) {
 
     if (regnpm.test(content[i]) || regcov.test(content[i])) {
 
-        content[i] = content[i].replace(/v\d+\.\d+\.\d+/g, n);
+        content[i] = content[i].replace(/v*\d+\.\d+\.\d+/g, n);
 
         if (content[i].indexOf(n) > -1) {
 
