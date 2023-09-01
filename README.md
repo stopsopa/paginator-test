@@ -2,7 +2,12 @@
 [![Coverage Status](https://coveralls.io/repos/github/stopsopa/paginator-test/badge.svg?branch=v0.0.9)](https://coveralls.io/github/stopsopa/paginator-test?branch=v0.0.9)
 [![Latest Stable Version](https://poser.pugx.org/stopsopa/paginator-test/v/stable)](https://packagist.org/packages/stopsopa/paginator-test)
 [![License](https://poser.pugx.org/stopsopa/paginator-test/license)](https://packagist.org/packages/stopsopa/paginator-test)
+# DEPRECATED ???
+Created in 2022 - quite old now and not maintained. Butt.... Due to it's simplicity I believe it could be still used 🤷
 
+Nothing to be ashamed here:
+
+I used best tools available at a time and delivered what's needed quickly.
 
 # Table of Contents
 
